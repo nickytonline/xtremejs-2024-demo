@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        width: 200px;
+        padding: 10px;
+        display: grid;
+        gap: 4px;
+      }
+
+      button {
+        width: 100%;
+        padding: 8px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="loginBtn">Login</button>
+    <div aria-live="polite">
+      <p id="status"></p>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "XtremeJS 2024 Demo",
+  "version": "1.0",
+  "description": "XtremeJS 2024 browser extenstion demo",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpU6W9H7BoPF6uXoJ1P1Ag5QQSqh2X0Y5b9RKDdj6lS5oHy7wd4B0K3ZfJtqV5FZrrS1oKNYYw4T96nzJ8zX1bWw8pY7f0WkZodJRFWmkrwFgfInuZ9JpzIcEZ4a6QQx8DiZcD/QFalHIOfECHgSrNUVFaJ2VxxFsGRwdPfxwRVdJ2CaG+ORH7Jh4A3dXpHzGj0v7nqH7wQsrLgmBFIzf45VqwEVYJxvUu2n0Z78lXuP0itliD7Gk3nIKGXk0rVxB+QbUOpxXM7QDCJiNkTnQpyPLRNnGILnDT4If2EkI3dBbYR0kZEBQC4PxplgpK1MlKp04AVqxBmw5Xv5wLaEYQIDAQAB",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://www.google.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
